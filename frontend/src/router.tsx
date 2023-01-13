@@ -1,25 +1,19 @@
+import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
-  Outlet,
-} from "react-router-dom";
+} from 'react-router-dom';
 
-
-import Login from './pages/signIn';
-
-
-
+import Login from './pages/SignIn/signIn';
 
 function MyRoutes() {
   return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<Login />} />
-        </Routes>
-      </Router>
-
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 
