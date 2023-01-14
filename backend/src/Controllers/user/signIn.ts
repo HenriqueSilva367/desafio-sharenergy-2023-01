@@ -8,7 +8,7 @@ export async function signIn(req: Request, res: Response) {
     } = req.body;
 
     if(username !== 'desafiosharenergy' || password !== 'sh@r3n3rgy'){
-      return res.status(200).json('Usuário ou Senha não conferem');
+      return res.status(400).json('Usuário ou Senha não conferem');
     }
 
     return res.status(200).json('Login Success');
