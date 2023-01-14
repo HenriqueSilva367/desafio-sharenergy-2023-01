@@ -1,0 +1,131 @@
+
+
+ .container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f8ff;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input__username {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__username label {
+  margin-bottom: 10px;
+  font-family: "Rubik" sans-serif;
+  font-size: 20px;
+}
+
+.content input {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 14px;
+  gap: 8px;
+  width: 344px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+.input__password label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Rubik" sans-serif;
+  font-size: 20px;
+}
+
+.input__password {
+  display: flex;
+  flex-direction: column;
+}
+
+.tbn__submit{
+  display: flex;
+  justify-content: center;
+}
+.tbn__submit button {
+  all: unset;
+  border: 1px solid #3b82f680;
+  text-align: center;
+  width: 217px;
+  height: 44px;
+  margin-top: 40px;
+  background: #4f46e5;
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.tbn__submit button:hover{
+  background-color: #4038e0;
+}
+
+.remember__me {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+[type=checkbox]:checked {
+  background-image: url('../../assets/check.svg');
+}
+
+[type=checkbox]:checked, [type=radio]:checked {
+  border-color: transparent;
+  background-color: #4038e0;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.remember__me input{
+  border-radius: 0.25rem;
+  width: 3px;
+  height: 15px;
+}
+
+.remember__me label{
+  border-radius: 0.25rem;
+    width: 164px;
+    height: 30px;
+    margin-left: 14px;
+}
+
+@media only screen and (max-width: 572px) {
+  .content input {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 14px;
+    gap: 8px;
+    width: 210px;
+    height: 44px;
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    margin-top: 6px;
+  }
+  .input__password label {
+    display: none;
+  }
+  .input__username label {
+    display: none;
+  }
+}
