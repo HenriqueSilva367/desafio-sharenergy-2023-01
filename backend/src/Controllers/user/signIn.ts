@@ -11,7 +11,7 @@ export async function signIn(req: Request, res: Response) {
       return res.status(400).json('Usuário ou Senha não conferem');
     }
 
-    return res.status(200).json('Login Success');
+    return res.status(200).json('Login Sucesso!');
   } catch (error) {
     res.sendStatus(500);
   }
