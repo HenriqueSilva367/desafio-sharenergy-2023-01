@@ -1,0 +1,40 @@
+.container__dog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container__dog img{
+  background: #eee;
+  border-radius: 5px;
+  box-shadow: 20px 20px 10px rgba(0,0,0,.2); 
+}
+.refresh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.content__refresh  {
+  all: unset;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #e5e7eb;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.content__refresh a{
+  all: unset;
+  padding: 11px;
+}
+
+.refresh button:hover{
+  background-color: #ccd3e0;
+} 

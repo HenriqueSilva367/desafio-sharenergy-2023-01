@@ -1,0 +1,17 @@
+.container__cat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 60%;
+}
+
+.content__select{
+  width: 40%;
+}

@@ -1,12 +1,15 @@
 import { useLocalStorage } from 'react-use';
 import { useState } from 'react';
 
+
 function useGlobalContextProvider() {
   const [token, setToken, cleaToken] = useLocalStorage('token');
   const [user, setUser, clearUser] = useLocalStorage('username');
   const [itens, setItens] = useState([]);
-  const [intemPage, setItemPage] = useState(10);
+  const [intemPage, setItemPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(0);
+  const [search, setSearch] = useState([]);
+  const [currentImage, setCurrentImage] = useState();
 
   return {
     token, 
@@ -20,7 +23,11 @@ function useGlobalContextProvider() {
     intemPage, 
     setItemPage,
     currentPage, 
-    setCurrentPage
+    setCurrentPage,
+    search, 
+    setSearch,
+    currentImage, 
+    setCurrentImage
   };
 }
 

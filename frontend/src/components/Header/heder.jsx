@@ -21,8 +21,8 @@ function Header() {
         <div className='content__header'>
           <ul className='menu__heder'>
             <li><Link to="/home">Home</Link></li>
-            <li>HTTP Cat</li>
-            <li>Random Dog</li>
+            <li><Link to="/httpcat">HTTP Cat</Link></li>
+            <li><Link to="/randomdog">Random Dog</Link></li>
             <li>Cadastrar Clientes</li>
           </ul>
         </div>
