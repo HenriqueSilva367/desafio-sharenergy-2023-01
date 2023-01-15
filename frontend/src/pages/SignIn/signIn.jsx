@@ -1,13 +1,15 @@
-import React from 'react';
-import { useState } from 'react';
 import api from '../../services/api';
+import React, { useState, useEffect } from 'react';
+import useGlobalContext from '../../hooks/useGlobalContext';
+import { useNavigate } from 'react-router-dom';
 import './styled.css';
 
-
 function Login() {
+
+  const { user, setUser, token, setToken} = useGlobalContext();
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-
+  const navigate = useNavigate();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -21,15 +23,26 @@ function Login() {
         password: password,
       });
 
-      if (response.status !== 200) {
-        return window.alert(response.data);
-      }
+      if (response.status !== 201) return window.alert('Usuário ou Senha não conferem');
+
+      const { user, token } = response.data;
+      
+      setUser(user);
+      setToken(token);
+      navigate('/home');
+      
+      console.log(response.status)
       window.alert(`Bem-vindo de volta ${email}`);
-      console.log();
     } catch (error) {
       console.log(error);
     }
   }
+
+  useEffect(()=>{
+    if(user){
+      navigate('/home');
+    }
+  }, [user, token, navigate]);
 
   return (
     <>

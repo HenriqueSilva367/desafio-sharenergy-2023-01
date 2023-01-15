@@ -1,26 +1,24 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
+import { Routes, Route, Outlet, Navigate } from "react-router-dom";
+import useGlobalContext from "./hooks/useGlobalContext";
+import SignIn from './pages/SignIn/signIn';
+import Home from './pages/Home/home'
 
-} from 'react-router-dom';
+function ProtectedRoutes({ redirectTo }){
+  const { user } = useGlobalContext();
 
-
-import Login from './pages/SignIn/signIn';
-import Home from './pages/Home/home';
-
+  return user ? <Outlet /> : <Navigate to={ redirectTo } />
+}
 
 
-function MyRoutes() {
+function MainRoutes() {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Login />} />
+    <Routes>
+      <Route path="/" element={<SignIn />} />
+      <Route element={<ProtectedRoutes redirectTo="/" />}>
         <Route path='/home' element={<Home />} />
-      </Routes>
-    </Router>
+      </Route>
+    </Routes>
   );
 }
 
-export default MyRoutes;
+export default MainRoutes;
