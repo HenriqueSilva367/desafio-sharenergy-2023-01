@@ -1,4 +1,4 @@
-# Frontend Desafio Blog
+# Frontend Desafio
 
  ### Esta aplicação foi criada para uma avaliação
 
