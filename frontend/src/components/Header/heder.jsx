@@ -23,7 +23,7 @@ function Header() {
             <li><Link to="/home">Home</Link></li>
             <li><Link to="/httpcat">HTTP Cat</Link></li>
             <li><Link to="/randomdog">Random Dog</Link></li>
-            <li>Cadastrar Clientes</li>
+            <li><Link to="/client">Clientes</Link></li>
           </ul>
         </div>
         <div className='logout_header'>

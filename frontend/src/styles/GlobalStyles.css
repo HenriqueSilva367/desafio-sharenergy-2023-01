@@ -7,3 +7,25 @@
     color: black
   }
 
+  .backdrop {
+    background: rgba(16, 15, 15, 0.56);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    background: #dddfe1;
+    padding: 56px;
+    position: relative;
+    text-align: center;
+    border-radius: 8px;
+}

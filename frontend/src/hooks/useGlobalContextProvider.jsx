@@ -8,9 +8,17 @@ function useGlobalContextProvider() {
   const [itens, setItens] = useState([]);
   const [intemPage, setItemPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(0);
-  const [search, setSearch] = useState([]);
   const [currentImage, setCurrentImage] = useState();
-
+  const [nome, setNome ]= useState('');
+  const [email, setEmail] = useState('');
+  const [telefone, setTelefone] = useState('');
+  const [endereco, setEndereco] = useState('');
+  const [cpf, setCpf] = useState('');
+  const [users, setUsers] = useState([]);
+  const [openAdd, setOpenAdd] = useState('');
+  const [openDelete, setOpenDelete] = useState('');
+  const [currentUser, setCurrentUser] = useState('');
+ 
   return {
     token, 
     setToken, 
@@ -24,10 +32,26 @@ function useGlobalContextProvider() {
     setItemPage,
     currentPage, 
     setCurrentPage,
-    search, 
-    setSearch,
     currentImage, 
-    setCurrentImage
+    setCurrentImage,
+    nome, 
+    setNome,
+    email, 
+    setEmail,
+    telefone, 
+    setTelefone,
+    endereco, 
+    setEndereco,
+    cpf, 
+    setCpf,
+    users, 
+    setUsers,
+    openAdd, 
+    setOpenAdd,
+    openDelete, 
+    setOpenDelete,
+    currentUser, 
+    setCurrentUser
   };
 }
 

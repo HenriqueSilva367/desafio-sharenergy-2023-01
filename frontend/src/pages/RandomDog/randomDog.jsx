@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Header from '../../components/Header/heder';
-import useGlobalContext from '../../hooks/useGlobalContext';
+import useGlobalContext from '../../hooks/useGlobalContextProvider';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import './styled.css';
@@ -20,7 +20,7 @@ function RandomDog() {
       })
       .catch((err) => {
       })
-  }, [])
+  }, [setCurrentImage])
 
 
   return (

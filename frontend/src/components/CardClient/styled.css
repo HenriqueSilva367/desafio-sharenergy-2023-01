@@ -1,0 +1,130 @@
+.container__card__client{
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  margin-top: -5.5rem;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  gap: 4.5rem;
+  padding: 1rem 2rem;
+}
+
+.container__search {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.input__search {
+  margin-top: 0.75rem;
+  background: rgb(221 223 225);
+  border: 1px solid rgb(176, 180, 184);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  color: #111111;
+}
+
+.container__post__client {
+  max-width: 864px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.posts__client {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.card__client{
+  width: 104%;
+  gap: 1.25rem;
+  padding: 1rem;
+  height: 330px;
+  border-radius: 10px;
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  transition: border 0.2s ease 0s;
+  background: rgb(221 223 225);
+  border: 2px solid transparent;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card__client:hover {
+  border: 2px solid rgb(123, 150, 178);
+}
+
+.header__card__client {
+  display: flex;
+  justify-content: center;
+}
+
+.header__card__client span {
+  font-size: 0.875rem;
+  line-height: 160%;
+  color: rgb(0, 0, 0);
+}
+
+.main__card__client span .title {
+  font-size: 18px;
+  color: rgb(151, 76, 76);
+}
+
+.main__card__client {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main__card__client p {
+  height: 100%;
+  text-align: justify;
+  color: rgb(0, 0, 0);
+}
+
+
+.btn{
+  display: flex;
+  justify-content: flex-end;
+}
+.btn__delete{
+  all: unset;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+.btn__edit{
+  all: unset;
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .card__client{
+    width: 90%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .posts__client {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}
